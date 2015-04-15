@@ -1,5 +1,6 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 ENV['PATH'] = "#{File.expand_path('../../bin', __FILE__)}#{File::PATH_SEPARATOR}#{ENV['PATH']}"
+Dir['./spec/support/**/*.rb'].each {|f| require f }
 
 require 'aruba'
 require 'aruba/api'
