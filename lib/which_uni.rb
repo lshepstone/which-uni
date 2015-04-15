@@ -1,4 +1,4 @@
-require "which_uni/version"
+require 'which_uni/version'
 
 module WhichUni
   # Your code goes here...
