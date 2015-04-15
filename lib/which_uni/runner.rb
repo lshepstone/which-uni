@@ -12,8 +12,9 @@ module WhichUni
         $stdin = @stdin
         $stdout = @stdout
 
-        # Run our normal Thor app the way we know and love.
-        MyCli::App.start(@argv)
+        # We'd pass in @argv here if we were supporting arguments.
+        # But we're not. So we don't. But we could. If we wanted to.
+        Console.new.feeling_lucky_search
 
         # Thor::Base#start does not have a return value, assume success if no exception is raised.
         0
