@@ -1,39 +1,42 @@
 # WhichUni
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/which_uni`. To experiment with that code, run `bin/console` for an interactive prompt.
+Perform a "I'm feeling lucky" style search for the phrase "which university" on the command line!
 
-TODO: Delete this and the text above, and describe your gem
+## Feedback
 
-## Installation
+I chose this test because it seemed a little more of a challenge given that I've been working on mostly Rails apps recently and thought testing a CLI app would be interesting.
 
-Add this line to your application's Gemfile:
+Please see the commit messages for decisions made along the way.
 
-```ruby
-gem 'which_uni'
-```
+### Running the command
 
-And then execute:
+Once the repo is cloned and you've installed the project's dependencies with `bundle`, you can run the command using
 
-    $ bundle
+    bundle exec bin/which-uni
 
-Or install it yourself as:
+Then you should see
 
-    $ gem install which_uni
+    which-uni version 0.0.0
+    Your feeling lucky search for 'which university' returned the page
+      "Which? University - find the best university & degree course"
+      located at http://university.which.co.uk/
+    Done.
 
-## Usage
+### Running the specs
 
-TODO: Write usage instructions here
+To run the specs, of course
 
-## Development
+    bundle exec rspec
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+Then you should see
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+    User executes the "which-uni" command
+      with search results and a working link for the first result
+        returns successfully
+        shows the version number for the tool
+        shows the search phrase used
+        shows the URL for the page of the first result
+        shows the page title for the page of the first result
 
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/which_uni/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+    WhichUni
+      has a version number
