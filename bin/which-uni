@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require 'which_uni'
+
+WhichUni::Console.new.feeling_lucky_search
