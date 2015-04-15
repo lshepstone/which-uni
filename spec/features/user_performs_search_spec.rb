@@ -1,6 +1,10 @@
 describe 'User executes the "which-uni" command' do
   context 'with search results and a working link for the first result' do
-    before { run_simple 'which-uni' }
+    before do
+      VCR.use_cassette(:valid_result, record: :once) do
+        run_simple 'which-uni'
+      end
+    end
 
     it 'returns successfully' do
       expect(last_exit_status).to eql(0)
